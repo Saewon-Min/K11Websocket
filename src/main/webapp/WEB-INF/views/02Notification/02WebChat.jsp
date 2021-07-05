@@ -80,7 +80,7 @@ function wsMessage(event) {
 	}else{
 		// 내용에 /가 있다면 귓속말 명렁어로 판단한다.
 		if(content.match("/")){ // => 이부분에서 방 별로 분리하는 코드를 짠다
-			if(content.match(("/"+chat_id))){
+			if(content.match(("/"+chat_id+" "))){
 				// 해당 아이디(닉네임)에게만 디스플레이 한다.
 				var temp = content.replace(("/"+chat_id),"[귓속말]");
 				// 메세지에 UI(디자인)를 적용하는 부분
@@ -185,7 +185,6 @@ function writeResponse(text) {
 
 </div>
 </body>
-
 
 
 </body>

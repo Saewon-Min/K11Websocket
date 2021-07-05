@@ -67,7 +67,7 @@ function wsMessage(event) {
 	}else{
 		if(content.match("/")){ 
 			// 귓속말 기능을 활용해서 특정 클라이언트 한명에게만 쪽지를 보낸다.
-			if(content.match(("/"+chat_id))){
+			if(content.match("/"+chat_id)){ 
 				console.log("notify()");
 				// 노티 함수 호출
 				notify(content);
