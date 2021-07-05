@@ -11,7 +11,7 @@
 <h1>Notification 이용한 알림받기</h1>
 <ul>
 	<li>
-		<a href="./Notification/01WebNot1.do" target="_blank">
+		<a href="./Notification/01WebNoti.do" target="_blank">
 		웹노티</a>
 	</li>
 	<li>
@@ -19,7 +19,7 @@
 		웹소캣</a>
 	</li>
 	<li>
-		<a href="./Notification/03SendMesssage.do" target="_blank">
+		<a href="./Notification/03SendMain.do" target="_blank">
 		쪽지보내기</a>
 	</li>
 </ul>

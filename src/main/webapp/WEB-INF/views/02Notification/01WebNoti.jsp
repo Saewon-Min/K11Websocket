@@ -20,23 +20,34 @@
 	</button>
 	
 	<script type="text/javascript">
+	// HTML 문서가 로드 되었을때 Notificationi를 통해 권한을 확인한다.
 	window.onload = function () {
 		if(window.Notification){
+			// 권한 요청 알림창 띄워줌
 			Notification.requesetPermission();
 		}else{
 			alert("웹노티를 지원하지 않습니다.");
 		}
 	}
 	
+	// notify()를 1초 후에 딱 한번 띄운다
 	function calculate() {
 		setTimeout(function () {
 			notify();
 		}, 1000);
 	}
+	
+	/*
+	해당 함수가 호출되면 작업표시줄 우측 하단에 알림을 표시한다.
+	*/
 	function notify() {
+		// 실행전 권한을 확인한다.
 		if(Notification.permission !== 'granted'){
 			alert("웹노티를 지원하지 않습니다.");
 		}else{
+			/*
+			Notification 객체를 생성하여 제목, 내용과 아이콘을 설정한다.
+			*/
 			var notification = new Notification(
 				'Title입니다ㅏ.',
 				{
@@ -47,6 +58,7 @@
 			
 			);
 			
+			// 알림창을 클릭 했을때 이동할 URL을 이벤트 핸들러에 등록한다
 			notification.onclick = function () {
 				window.open('http://www.ikosmo.co.kr');
 			};
